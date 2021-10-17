@@ -4,7 +4,7 @@ import './App.css';
 //localStorage.setItem('name', JSON.stringify(this.state))
 
 function App() {
-  const [name, setName] = useState(window.localStorage.getItem('name'));
+  const [name, setName] = useState(JSON.parse(window.localStorage.getItem('name')));
 
   const handleOnChange = (event) => {
     setName(event.target.value);
